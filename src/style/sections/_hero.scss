@@ -4,7 +4,14 @@
   display: flex;
   align-items: center;
   border-bottom: 0px;
-  background: $white-color;
+  /*background: $white-color;*/
+
+  background: url(../assets/heroPic.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
   font-weight: 400;
   color: $dark-blue-text;
   padding: 0rem 5.6rem;
