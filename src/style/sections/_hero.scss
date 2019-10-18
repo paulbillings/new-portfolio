@@ -28,6 +28,18 @@
     background-attachment: initial;
   }
 
+  @include respond(phone-xs) {
+    background-attachment: initial;
+  }
+
+  @include respond(tab-land) {
+    background-attachment: initial;  
+  }
+
+  @include respond(tab-port) {
+    background-attachment: initial; 
+  }
+
   .hero-title {
     font-size: 5.6rem;
     font-weight: 700;
