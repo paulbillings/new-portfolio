@@ -25,7 +25,7 @@
 
   @include respond(phone) {
     padding: 0rem $default-font-size;
-    background-size: auto;
+    background-attachment: initial;
   }
 
   .hero-title {
