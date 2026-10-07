@@ -3,6 +3,15 @@ const common = require('./webpack.common');
 const merge = require('webpack-merge');
 const path = require('path');
 
+const staticPages = ['wrenford-rescue/privacy', 'wrenford-rescue/support'].map(
+  page =>
+    new HtmlWebpackPlugin({
+      template: `./src/${page}.html`,
+      filename: `${page}/index.html`,
+      inject: false
+    })
+);
+
 module.exports = merge(common, {
   mode: 'development',
   output: {
@@ -13,7 +22,8 @@ module.exports = merge(common, {
     new HtmlWebpackPlugin({
       template: './src/template.html',
       favicon: './src/assets/favicon.png'
-    })
+    }),
+    ...staticPages
   ],
   module: {
     rules: [

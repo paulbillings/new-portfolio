@@ -7,6 +7,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
+// Standalone pages copied as-is, served at /<path> (e.g. /wrenford-rescue/privacy)
+const staticPages = ['wrenford-rescue/privacy', 'wrenford-rescue/support'].map(
+  page =>
+    new HtmlWebpackPlugin({
+      template: `./src/${page}.html`,
+      filename: `${page}/index.html`,
+      inject: false,
+      minify: false
+    })
+);
+
 module.exports = merge(common, {
   mode: 'production',
   output: {
@@ -32,7 +43,8 @@ module.exports = merge(common, {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].[contentHash].css'
-    })
+    }),
+    ...staticPages
   ],
   module: {
     rules: [
