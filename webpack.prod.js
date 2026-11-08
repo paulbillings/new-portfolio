@@ -8,7 +8,12 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 // Standalone pages copied as-is, served at /<path> (e.g. /wrenford-rescue/privacy)
-const staticPages = ['wrenford-rescue/privacy', 'wrenford-rescue/support'].map(
+const staticPages = [
+  'wrenford-rescue/privacy',
+  'wrenford-rescue/support',
+  'perfect-parcel/privacy',
+  'perfect-parcel/support'
+].map(
   page =>
     new HtmlWebpackPlugin({
       template: `./src/${page}.html`,

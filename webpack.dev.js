@@ -3,7 +3,12 @@ const common = require('./webpack.common');
 const merge = require('webpack-merge');
 const path = require('path');
 
-const staticPages = ['wrenford-rescue/privacy', 'wrenford-rescue/support'].map(
+const staticPages = [
+  'wrenford-rescue/privacy',
+  'wrenford-rescue/support',
+  'perfect-parcel/privacy',
+  'perfect-parcel/support'
+].map(
   page =>
     new HtmlWebpackPlugin({
       template: `./src/${page}.html`,
