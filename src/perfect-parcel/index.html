@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Perfect Parcel press kit</title>
+<meta name="description" content="Press kit for Perfect Parcel, a cosy Christmas packing puzzle for iPhone by Paul Billings. Factsheet, descriptions, trailer, GIFs, screenshots, logo and art.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Perfect Parcel: a cosy Christmas packing puzzle for iPhone">
+<meta property="og:description" content="Pack every gift into its box with not a gap to spare, and fix Santa's Workshop before Christmas Eve.">
+<meta property="og:url" content="https://www.paulbillings.co.uk/perfect-parcel">
+<meta property="og:image" content="https://www.paulbillings.co.uk/perfect-parcel/press/web/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/perfect-parcel/press/web/app-icon.png">
+<link rel="apple-touch-icon" href="/perfect-parcel/press/web/app-icon.png">
+<link rel="preload" href="/perfect-parcel/press/fonts/Grandstander-Black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/perfect-parcel/press/fonts/Nunito-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Perfect Parcel press kit. The game's felt diorama look (Parcel repo, docs/art-direction.md):
+   sky band hero, cream felt panels with inset stitches, a green felt band for the moving pictures. */
+@font-face{font-family:"Grandstander";src:url(/perfect-parcel/press/fonts/Grandstander-Black.woff2) format("woff2");font-weight:900;font-display:swap}
+@font-face{font-family:"Nunito";src:url(/perfect-parcel/press/fonts/Nunito-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Nunito";src:url(/perfect-parcel/press/fonts/Nunito-ExtraBold.woff2) format("woff2");font-weight:800;font-display:swap}
+:root{
+  --red:#C23B2E;--red-dk:#8C261C;--green:#3F7D4A;--green-dk:#2C5C35;--gold:#E2A93B;--gold-lt:#F6D58E;--gold-dk:#B5801E;
+  --navy:#2E4F8A;--cream:#F4ECDB;--stitch:#C8BA9C;--ink:#3B2A1E;--ink-soft:#6B5644;
+  --sky-1:#8CC7DB;--sky-2:#DCF0F5;--snow:#EEF6F7;
+  --display:"Grandstander","Nunito",system-ui,sans-serif;--body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--snow);color:var(--ink);font:700 1.02rem/1.6 var(--body);margin:0;overflow-x:hidden}
+img,video{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:900;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:1.9rem;color:var(--red);text-shadow:0 3px 0 #E8C9B8;letter-spacing:.01em}
+h3{font-size:1.15rem;color:var(--ink)}
+p{margin:0}
+a{color:var(--navy);font-weight:800}
+a:focus-visible,button:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.felt{background:var(--cream);border-radius:22px;position:relative;box-shadow:0 6px 0 var(--stitch)}
+.felt::after{content:"";position:absolute;inset:7px;border:2px dashed var(--stitch);border-radius:16px;pointer-events:none}
+.btn{display:inline-flex;align-items:center;gap:.5em;font:900 1.05rem/1 var(--display);color:var(--cream);background:var(--red);
+  padding:.85em 1.3em;border-radius:16px;box-shadow:0 5px 0 var(--red-dk);text-decoration:none;position:relative;transition:transform .12s,box-shadow .12s}
+.btn::after{content:"";position:absolute;inset:4px;border:2px dashed #E9877C;border-radius:12px;pointer-events:none}
+.btn:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--red-dk)}
+.btn small{font:800 .75rem/1 var(--body);opacity:.85}
+.btn.small{font-size:.88rem;padding:.65em .95em}
+.btn.gold{background:var(--gold);color:var(--ink);box-shadow:0 5px 0 var(--gold-dk)}
+.btn.gold::after{border-color:var(--gold-lt)}
+.btn.gold:hover{box-shadow:0 3px 0 var(--gold-dk)}
+
+.hero{background:linear-gradient(180deg,var(--sky-1),var(--sky-2));position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:24px;align-items:end;padding-block:36px 0}
+.hero-copy{padding-bottom:56px;display:grid;gap:18px;justify-items:start}
+.eyebrow{font:800 .78rem/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--navy);background:var(--cream);padding:.55em .9em;border-radius:99px}
+.logo{width:min(420px,100%);height:auto;display:block}
+.pitch{font:900 clamp(1.3rem,2.6vw,1.7rem)/1.25 var(--display);color:var(--ink)}
+.lede{max-width:34em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.soon{display:inline-flex;align-items:center;gap:.6em;background:#111;color:#fff;border-radius:12px;padding:.55em 1em;font:700 .8rem/1.15 var(--body)}
+.soon b{display:block;font-size:1.05rem}
+.hero-art{display:flex;justify-content:center;align-items:flex-end}
+.hero-art img{width:min(380px,100%);height:auto;display:block;margin-bottom:-6px}
+.ground{height:46px;background:var(--snow);position:relative;margin-top:-22px;
+  -webkit-mask:radial-gradient(28px 24px at 28px 24px,#000 98%,transparent) -28px 0/56px 100% repeat-x,linear-gradient(#000,#000) 0 22px/100% 100% no-repeat;
+  mask:radial-gradient(28px 24px at 28px 24px,#000 98%,transparent) -28px 0/56px 100% repeat-x,linear-gradient(#000,#000) 0 22px/100% 100% no-repeat}
+.snow{position:absolute;inset:0;pointer-events:none}
+.snow i{position:absolute;border-radius:50%;background:#fff}
+
+section{padding-block:44px}
+.sec-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.grid-fact{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:28px;align-items:start}
+.facts{padding:26px}
+.facts h2{font-size:1.4rem;margin-bottom:14px}
+.facts dl{margin:0;display:grid;gap:10px}
+.facts dt{font:800 .72rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+.facts dd{margin:.25em 0 0}
+.facts .row{padding-bottom:10px;border-bottom:2px dotted var(--stitch)}
+.facts .row:last-child{border:0;padding-bottom:0}
+.desc{display:grid;gap:22px;min-width:0}
+.desc .felt{padding:26px 28px}
+.desc .text p+p{margin-top:.8em}
+.desc ul{margin:.8em 0 0;padding-left:1.2em}
+.desc li{margin:.25em 0}
+.card-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;position:relative;z-index:1}
+.tag{display:inline-block;font:800 .72rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--cream);background:var(--green);padding:.5em .8em;border-radius:8px}
+.tag.red{background:var(--red)}
+.copy{font:800 .78rem/1 var(--body);background:var(--snow);color:var(--navy);border:2px solid var(--stitch);border-radius:10px;padding:.5em .8em;cursor:pointer;position:relative;z-index:1}
+
+.band{background:var(--green);position:relative}
+.band::before{content:"";position:absolute;inset:10px 0;border-block:2px dashed #9BC7A0;pointer-events:none}
+.band h2{color:var(--cream);text-shadow:0 2px 0 var(--green-dk),0 4px 0 #1d3f24}
+.media{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:28px;align-items:start}
+.phone{border-radius:26px;overflow:hidden;background:#000;box-shadow:0 7px 0 var(--green-dk);aspect-ratio:9/16}
+.phone video,.phone img{width:100%;height:100%;object-fit:cover;display:block}
+.gifs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.gifs figure{margin:0;display:grid;gap:10px}
+.gifs .phone{aspect-ratio:1206/2622}
+.gifs a{color:inherit;text-decoration:none}
+.cap{font:800 .95rem/1.3 var(--body);color:var(--cream)}
+.cap small{display:block;font-weight:700;opacity:.85}
+.media-side{display:grid;gap:20px;min-width:0}
+.note{color:var(--cream);font-size:.92rem}
+.note a{color:var(--gold-lt)}
+
+.shots{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.shots a{display:block;border-radius:18px;overflow:hidden;box-shadow:0 6px 0 var(--stitch);background:var(--cream);transition:transform .12s}
+.shots a:hover{transform:translateY(-3px)}
+.shots img{display:block;width:100%;height:auto}
+
+.assets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.asset{padding:18px 18px 20px;display:grid;gap:10px;justify-items:center;text-align:center}
+.asset .pic{width:100%;aspect-ratio:1;display:grid;place-items:center;border-radius:14px;background:var(--sky-2)}
+.asset .pic.dark{background:var(--navy)}
+.asset .pic img{max-width:84%;max-height:84%;height:auto}
+.asset .pic img.icon{border-radius:22%;max-width:70%}
+.asset .links{display:flex;gap:12px;font-size:.9rem;position:relative;z-index:1}
+
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.about .felt{padding:26px 28px;display:grid;gap:12px;align-content:start}
+.about .tag{justify-self:start}
+.contact-line{display:flex;flex-wrap:wrap;gap:10px;align-items:center;position:relative;z-index:1}
+.mail{font:800 1.05rem/1.2 var(--body);overflow-wrap:anywhere}
+footer{padding-block:28px 40px;color:var(--ink-soft);font-size:.9rem}
+footer nav{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:8px}
+
+@media (max-width:860px){
+  .hero .wrap,.grid-fact,.media,.about{grid-template-columns:minmax(0,1fr)}
+  .hero-copy{padding-bottom:8px}
+  .hero-art img{width:min(260px,70%)}
+  .shots{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .assets{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .media .phone.trailer{width:100%;max-width:300px;margin-inline:auto}
+}
+@media (max-width:480px){
+  .gifs{gap:10px}
+  .cap small{display:none}
+  .shots{gap:10px}
+  h2{font-size:1.5rem}
+}
+@media (prefers-reduced-motion:reduce){.snow{display:none}.btn,.shots a{transition:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="snow" aria-hidden="true" id="snow"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Press kit</span>
+      <h1><img class="logo" src="/perfect-parcel/press/web/logo.png" alt="Perfect Parcel" width="840" height="457"></h1>
+      <p class="pitch">A cosy Christmas packing puzzle for iPhone.</p>
+      <p class="lede">Pack every gift into its box with not a gap to spare, earn coins, and fix Santa's Workshop before Christmas Eve. Made by one developer in Birmingham, UK.</p>
+      <div class="hero-actions">
+        <a class="btn" href="/perfect-parcel/press/perfect-parcel-press-kit.zip" download>Download press kit <small>ZIP, 14 MB</small></a>
+        <span class="soon"><svg width="20" height="24" viewBox="0 0 20 24" aria-hidden="true"><path fill="#fff" d="M16.4 12.7c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg><span>Coming soon to the<b>App Store</b></span></span>
+      </div>
+    </div>
+    <div class="hero-art"><img src="/perfect-parcel/press/web/robin-wave.png" alt="Postmaster Robin waving" width="760" height="637"></div>
+  </div>
+  <div class="ground" aria-hidden="true"></div>
+</header>
+
+<main>
+<section aria-labelledby="about-game">
+  <h2 id="about-game" class="sr-only">About the game</h2>
+  <div class="wrap grid-fact">
+    <aside class="felt facts" aria-labelledby="factsheet">
+      <h2 id="factsheet">Factsheet</h2>
+      <dl>
+        <div class="row"><dt>Developer</dt><dd>Paul Billings, solo developer<br>Birmingham, UK</dd></div>
+        <div class="row"><dt>Release date</dt><dd>December 2026</dd></div>
+        <div class="row"><dt>Platform</dt><dd>iPhone (iOS 15 or later)</dd></div>
+        <div class="row"><dt>Price</dt><dd>Free, with optional in-app purchases</dd></div>
+        <div class="row"><dt>Genre</dt><dd>Cosy puzzle, packing, light decorating</dd></div>
+        <div class="row"><dt>Content</dt><dd>116 parcels, and Santa's Workshop to repair and decorate</dd></div>
+        <div class="row"><dt>Languages</dt><dd>English</dd></div>
+        <div class="row"><dt>Links</dt><dd>App Store: coming soon<br><a href="#trailer">Trailer</a> · <a href="/perfect-parcel/support">Support</a></dd></div>
+        <div class="row"><dt>Press contact</dt><dd><a href="mailto:perfect-parcel@paulbillings.co.uk">perfect-parcel@paulbillings.co.uk</a></dd></div>
+      </dl>
+    </aside>
+
+    <div class="desc">
+      <article class="felt">
+        <div class="card-head"><span class="tag">Short description</span><button class="copy" type="button" data-copy="short">Copy</button></div>
+        <div class="text" id="short"><p>Perfect Parcel is a cosy Christmas packing puzzle for iPhone. You're the new elf in the Lapland post room: pack every awkward pile of gifts into its box with not a single gap, then spend the coins you earn fixing Santa's Workshop, which the new sleigh crashed straight through on its test flight.</p></div>
+      </article>
+      <article class="felt">
+        <div class="card-head"><span class="tag">Long description</span><button class="copy" type="button" data-copy="long">Copy</button></div>
+        <div class="text" id="long">
+          <p>Christmas runs on goodwill, and goodwill is running low. The brand-new sleigh sputtered on its test flight and crashed through the roof of Santa's Workshop. Every parcel packed with care sends a little goodwill back out into the world, and the coins it earns pay to put things right before Christmas Eve.</p>
+          <p>Each parcel is a small, hand-made puzzle. Gifts drop into a side-on box under gravity, you drag them in and tap to turn them, and the box has to be filled exactly: gifts and bubble wrap, no gaps. Each puzzle has one answer. New rules arrive as you go: fragile gifts need padding beside them, heavy gifts can't sit on fragile ones, and "this way up" gifts can't be turned. Undo is always free, and there are no timers and no fail screens.</p>
+          <p>When a parcel is packed you fold the lid, pull the tape and thump down the ON TIME FOR XMAS stamp. Then it's back to the workshop to patch the roof, mend the chimney and fix the window, before decorating it with a tree, a train set and a star on top, while the sky outside fills with stars and northern lights.</p>
+          <p>Your guide is Postmaster Robin, an over-excited robin in a postman's cap who thinks every day is the best day ever. The whole game is made to look like a felt diorama, like a little stop-motion set.</p>
+          <ul>
+            <li>116 hand-checked parcels, each with exactly one solution</li>
+            <li>Repair, then decorate Santa's Workshop with 18 items</li>
+            <li>Plays offline, no account needed</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="trailer" aria-labelledby="trailer-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="trailer-h">Trailer and GIFs</h2><a class="btn gold small" href="/perfect-parcel/press/trailer/perfect-parcel-trailer-1080x1920.mp4" download>Download trailer <small>MP4, 30 s</small></a></div>
+    <div class="media">
+      <div class="phone trailer"><video src="/perfect-parcel/press/trailer/perfect-parcel-trailer-1080x1920.mp4" poster="/perfect-parcel/press/trailer/poster.jpg" controls playsinline preload="none" aria-label="Perfect Parcel trailer, 30 seconds"></video></div>
+      <div class="media-side">
+        <div class="gifs">
+          <figure><a href="/perfect-parcel/press/gifs/packing.gif"><div class="phone"><img src="/perfect-parcel/press/gifs/packing.gif" alt="Dragging and turning gifts into the box" loading="lazy" width="360" height="783"></div></a><figcaption class="cap">Packing<small>Drag, turn, no gaps</small></figcaption></figure>
+          <figure><a href="/perfect-parcel/press/gifs/sealing.gif"><div class="phone"><img src="/perfect-parcel/press/gifs/sealing.gif" alt="The last gift goes in and the parcel is stamped ON TIME FOR XMAS" loading="lazy" width="360" height="783"></div></a><figcaption class="cap">Sealing<small>The stamp lands</small></figcaption></figure>
+          <figure><a href="/perfect-parcel/press/gifs/workshop.gif"><div class="phone"><img src="/perfect-parcel/press/gifs/workshop.gif" alt="Repairs and decorations appearing in Santa's Workshop" loading="lazy" width="360" height="783"></div></a><figcaption class="cap">The workshop<small>Wrecked to wonderful</small></figcaption></figure>
+        </div>
+        <p class="note">The trailer is 1080 × 1920, made for phones. The GIFs are captured from the game on iPhone; open one to save it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="shots-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="shots-h">Screenshots</h2><a class="btn small" href="/perfect-parcel/press/perfect-parcel-press-kit.zip" download>Download all <small>in the ZIP</small></a></div>
+    <div class="shots">
+      <a href="/perfect-parcel/press/screens/01-packing.png"><img src="/perfect-parcel/press/web/01-packing.jpg" alt="Packing a parcel for Mrs Claus" loading="lazy" width="540" height="1174"></a>
+      <a href="/perfect-parcel/press/screens/02-sealed.png"><img src="/perfect-parcel/press/web/02-sealed.jpg" alt="Parcel sealed: Perfectly packed!" loading="lazy" width="540" height="1174"></a>
+      <a href="/perfect-parcel/press/screens/03-workshop-wrecked.png"><img src="/perfect-parcel/press/web/03-workshop-wrecked.jpg" alt="Santa's Workshop after the sleigh crash" loading="lazy" width="540" height="1174"></a>
+      <a href="/perfect-parcel/press/screens/04-workshop-decorated.png"><img src="/perfect-parcel/press/web/04-workshop-decorated.jpg" alt="The workshop repaired and being decorated" loading="lazy" width="540" height="1174"></a>
+      <a href="/perfect-parcel/press/screens/05-postmaster-robin.png"><img src="/perfect-parcel/press/web/05-postmaster-robin.jpg" alt="Postmaster Robin welcomes the new elf" loading="lazy" width="540" height="1174"></a>
+      <a href="/perfect-parcel/press/screens/06-home.png"><img src="/perfect-parcel/press/web/06-home.jpg" alt="The snowy home screen" loading="lazy" width="540" height="1174"></a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:8px" aria-labelledby="art-h">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="art-h">Logo, icon and Robin</h2><a class="btn small" href="/perfect-parcel/press/perfect-parcel-press-kit.zip" download>Download all <small>in the ZIP</small></a></div>
+    <div class="assets">
+      <div class="felt asset"><div class="pic"><img src="/perfect-parcel/press/web/logo.png" alt="Perfect Parcel logo" loading="lazy"></div><h3>Logo</h3><div class="links"><a href="/perfect-parcel/press/art/perfect-parcel-logo.png">PNG</a><a href="/perfect-parcel/press/art/perfect-parcel-logo.svg">SVG</a></div></div>
+      <div class="felt asset"><div class="pic dark"><img class="icon" src="/perfect-parcel/press/web/app-icon.png" alt="App icon: Postmaster Robin on red felt" loading="lazy"></div><h3>App icon</h3><div class="links"><a href="/perfect-parcel/press/art/app-icon-1024.png">PNG, 1024</a></div></div>
+      <div class="felt asset"><div class="pic"><img src="/perfect-parcel/press/web/robin-happy.png" alt="Postmaster Robin, happy" loading="lazy"></div><h3>Postmaster Robin</h3><div class="links"><a href="/perfect-parcel/press/art/postmaster-robin-happy.png">PNG</a><a href="/perfect-parcel/press/art/postmaster-robin-happy.svg">SVG</a></div></div>
+      <div class="felt asset"><div class="pic"><img src="/perfect-parcel/press/web/robin-hard-hat.png" alt="Robin in a hard hat, cheering" loading="lazy"></div><h3>Robin, repairing</h3><div class="links"><a href="/perfect-parcel/press/art/postmaster-robin-hard-hat.png">PNG</a><a href="/perfect-parcel/press/art/postmaster-robin-hard-hat.svg">SVG</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:8px" aria-label="Developer and contact">
+  <div class="wrap about">
+    <div class="felt">
+      <span class="tag">About the developer</span>
+      <h3>Paul Billings</h3>
+      <p>Paul Billings is an independent developer in Birmingham, UK, who makes small, cosy games for iPhone. He made Perfect Parcel on his own in Unity, from the first sketch to the last felt stitch.</p>
+    </div>
+    <div class="felt">
+      <span class="tag red">Press and contact</span>
+      <h3>Codes, interviews and questions</h3>
+      <p>Review codes and early TestFlight access are available for press and creators. Just ask.</p>
+      <div class="contact-line"><a class="mail" id="mail" href="mailto:perfect-parcel@paulbillings.co.uk">perfect-parcel@paulbillings.co.uk</a><button class="copy" type="button" data-copy="mail">Copy</button></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Perfect Parcel © 2026 Paul Billings. You're welcome to use anything on this page to write about or feature the game.</p>
+    <nav aria-label="Information"><a href="/perfect-parcel/privacy">Privacy policy</a><a href="/perfect-parcel/support">Support</a><a href="/">Paul Billings</a></nav>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var s = document.getElementById('snow');
+  for (var i = 0; i < 34; i++) {
+    var f = document.createElement('i'), r = 4 + Math.random() * 7;
+    f.style.width = f.style.height = r + 'px';
+    f.style.left = (Math.random() * 100) + '%';
+    f.style.top = (Math.random() * 92) + '%';
+    f.style.opacity = (0.45 + Math.random() * 0.5).toFixed(2);
+    s.appendChild(f);
+  }
+  function select(el) { var r = document.createRange(); r.selectNodeContents(el); var w = getSelection(); w.removeAllRanges(); w.addRange(r); }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-copy]'), function (b) {
+    b.addEventListener('click', function () {
+      var el = document.getElementById(b.getAttribute('data-copy'));
+      var text = el.innerText.trim();
+      var done = function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1600); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function () { select(el); });
+      else select(el);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const common = require('./webpack.common');
 const merge = require('webpack-merge');
 const path = require('path');
+const CopyFolderPlugin = require('./copy-folder-plugin');
 
 const staticPages = [
   'wrenford-rescue/privacy',
@@ -17,6 +18,19 @@ const staticPages = [
     })
 );
 
+// Perfect Parcel press kit at /perfect-parcel, with its images, video and zip
+const pressKit = [
+  new HtmlWebpackPlugin({
+    template: './src/perfect-parcel/index.html',
+    filename: 'perfect-parcel/index.html',
+    inject: false
+  }),
+  new CopyFolderPlugin(
+    path.resolve(__dirname, 'src/perfect-parcel/press'),
+    'perfect-parcel/press'
+  )
+];
+
 module.exports = merge(common, {
   mode: 'development',
   output: {
@@ -28,7 +42,8 @@ module.exports = merge(common, {
       template: './src/template.html',
       favicon: './src/assets/favicon.png'
     }),
-    ...staticPages
+    ...staticPages,
+    ...pressKit
   ],
   module: {
     rules: [

@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const common = require('./webpack.common');
 const merge = require('webpack-merge');
 const path = require('path');
+const CopyFolderPlugin = require('./copy-folder-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -22,6 +23,20 @@ const staticPages = [
       minify: false
     })
 );
+
+// Perfect Parcel press kit at /perfect-parcel, with its images, video and zip
+const pressKit = [
+  new HtmlWebpackPlugin({
+    template: './src/perfect-parcel/index.html',
+    filename: 'perfect-parcel/index.html',
+    inject: false,
+    minify: false
+  }),
+  new CopyFolderPlugin(
+    path.resolve(__dirname, 'src/perfect-parcel/press'),
+    'perfect-parcel/press'
+  )
+];
 
 module.exports = merge(common, {
   mode: 'production',
@@ -49,7 +64,8 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: '[name].[contentHash].css'
     }),
-    ...staticPages
+    ...staticPages,
+    ...pressKit
   ],
   module: {
     rules: [
