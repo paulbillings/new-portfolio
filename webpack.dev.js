@@ -18,11 +18,17 @@ const staticPages = [
     })
 );
 
-// Perfect Parcel press kit at /perfect-parcel, with its images, video and zip
+// Perfect Parcel: player landing page at /perfect-parcel, press kit at
+// /perfect-parcel/press, with their images, video and zip
 const pressKit = [
   new HtmlWebpackPlugin({
     template: './src/perfect-parcel/index.html',
     filename: 'perfect-parcel/index.html',
+    inject: false
+  }),
+  new HtmlWebpackPlugin({
+    template: './src/perfect-parcel/press.html',
+    filename: 'perfect-parcel/press/index.html',
     inject: false
   }),
   new CopyFolderPlugin(

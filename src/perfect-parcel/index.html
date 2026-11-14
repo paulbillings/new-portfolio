@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light">
-<title>Perfect Parcel press kit</title>
-<meta name="description" content="Press kit for Perfect Parcel, a cosy Christmas packing puzzle for iPhone by Paul Billings. Factsheet, descriptions, trailer, GIFs, screenshots, logo and art.">
+<title>Perfect Parcel: a cosy Christmas packing puzzle for iPhone</title>
+<meta name="description" content="Pack every gift into its box with not a gap to spare, then fix Santa's Workshop before Christmas Eve. A cosy Christmas puzzle for iPhone by Paul Billings.">
+<link rel="canonical" href="https://www.paulbillings.co.uk/perfect-parcel">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Perfect Parcel: a cosy Christmas packing puzzle for iPhone">
 <meta property="og:description" content="Pack every gift into its box with not a gap to spare, and fix Santa's Workshop before Christmas Eve.">
@@ -156,19 +157,47 @@ footer nav{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:8px}
 }
 @media (prefers-reduced-motion:reduce){.snow{display:none}.btn,.shots a{transition:none}}
 </style>
+<style>
+/* Landing page additions */
+.hero-copy .pitch{font-size:clamp(1.6rem,3.4vw,2.2rem)}
+.btn.green{background-color:var(--green);box-shadow:0 5px 0 var(--green-dk)}
+.btn.green::after{border-color:#9BC7A0}
+.btn.green:hover{box-shadow:0 3px 0 var(--green-dk)}
+.soon.big{padding:.7em 1.2em;font-size:.85rem}
+.soon.big b{font-size:1.25rem}
+.features{display:grid;gap:22px;align-content:center;align-self:center}
+.feature{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;align-items:center;padding:14px 18px 14px 14px}
+.feature .thumb{border-radius:14px;overflow:hidden;aspect-ratio:1206/1400;background:var(--sky-2)}
+.feature .thumb img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.feature h3{font-size:1.2rem;margin-bottom:4px}
+.feature p{color:var(--ink-soft)}
+.band .features .felt{box-shadow:0 6px 0 var(--green-dk)}
+.shots.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.shots.four figure{margin:0;border-radius:18px;overflow:hidden;box-shadow:0 6px 0 var(--stitch);background:var(--cream)}
+.shots.four img{display:block;width:100%;height:auto}
+.robin-card{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:24px;align-items:center;padding:24px 30px}
+.robin-card img{width:100%;height:auto;display:block}
+.robin-card .say{font:900 1.35rem/1.3 var(--display);color:var(--ink)}
+.cta{display:grid;justify-items:center;gap:16px;text-align:center;padding-block:8px 52px}
+.cta .pitch{font:900 1.5rem/1.25 var(--display)}
+@media (max-width:860px){
+  .shots.four{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .robin-card{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center}
+  .robin-card img{max-width:200px}
+}
+</style>
 </head>
 <body>
 <header class="hero">
   <div class="snow" aria-hidden="true" id="snow"></div>
   <div class="wrap">
     <div class="hero-copy">
-      <span class="eyebrow">Press kit</span>
       <h1><img class="logo" src="/perfect-parcel/press/web/logo.png" alt="Perfect Parcel" width="840" height="457"></h1>
-      <p class="pitch">A cosy Christmas packing puzzle for iPhone.</p>
-      <p class="lede">Pack every gift into its box with not a gap to spare, earn coins, and fix Santa's Workshop before Christmas Eve. Made by one developer in Birmingham, UK.</p>
+      <p class="pitch">Everything fits. Surely.</p>
+      <p class="lede">A cosy Christmas packing puzzle for iPhone. Pack every gift into its box with not a gap to spare, then spend your coins fixing Santa's Workshop before Christmas Eve.</p>
       <div class="hero-actions">
-        <a class="btn" href="/perfect-parcel/press/perfect-parcel-press-kit.zip" download>Download press kit <small>ZIP, 14 MB</small></a>
-        <span class="soon"><svg width="20" height="24" viewBox="0 0 20 24" aria-hidden="true"><path fill="#fff" d="M16.4 12.7c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg><span>Coming soon to the<b>App Store</b></span></span>
+        <span class="soon big"><svg width="22" height="26" viewBox="0 0 20 24" aria-hidden="true"><path fill="#fff" d="M16.4 12.7c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg><span>Coming soon to the<b>App Store</b></span></span>
+        <a class="btn" href="#trailer">Watch the trailer</a>
       </div>
     </div>
     <div class="hero-art"><img src="/perfect-parcel/press/web/robin-wave.png" alt="Postmaster Robin waving" width="760" height="637"></div>
@@ -177,59 +206,15 @@ footer nav{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:8px}
 </header>
 
 <main>
-<section aria-labelledby="about-game">
-  <h2 id="about-game" class="sr-only">About the game</h2>
-  <div class="wrap grid-fact">
-    <aside class="felt facts" aria-labelledby="factsheet">
-      <h2 id="factsheet">Factsheet</h2>
-      <dl>
-        <div class="row"><dt>Developer</dt><dd>Paul Billings, solo developer<br>Birmingham, UK</dd></div>
-        <div class="row"><dt>Release date</dt><dd>December 2026</dd></div>
-        <div class="row"><dt>Platform</dt><dd>iPhone (iOS 15 or later)</dd></div>
-        <div class="row"><dt>Price</dt><dd>Free, with optional in-app purchases</dd></div>
-        <div class="row"><dt>Genre</dt><dd>Cosy puzzle, packing, light decorating</dd></div>
-        <div class="row"><dt>Content</dt><dd>116 parcels, and Santa's Workshop to repair and decorate</dd></div>
-        <div class="row"><dt>Languages</dt><dd>English</dd></div>
-        <div class="row"><dt>Links</dt><dd>App Store: coming soon<br><a href="#trailer">Trailer</a> · <a href="/perfect-parcel/support">Support</a></dd></div>
-        <div class="row"><dt>Press contact</dt><dd><a href="mailto:perfect-parcel@paulbillings.co.uk">perfect-parcel@paulbillings.co.uk</a></dd></div>
-      </dl>
-    </aside>
-
-    <div class="desc">
-      <article class="felt">
-        <div class="card-head"><span class="tag">Short description</span><button class="copy" type="button" data-copy="short">Copy</button></div>
-        <div class="text" id="short"><p>Perfect Parcel is a cosy Christmas packing puzzle for iPhone. You're the new elf in the Lapland post room: pack every awkward pile of gifts into its box with not a single gap, then spend the coins you earn fixing Santa's Workshop, which the new sleigh crashed straight through on its test flight.</p></div>
-      </article>
-      <article class="felt">
-        <div class="card-head"><span class="tag">Long description</span><button class="copy" type="button" data-copy="long">Copy</button></div>
-        <div class="text" id="long">
-          <p>Christmas runs on goodwill, and goodwill is running low. The brand-new sleigh sputtered on its test flight and crashed through the roof of Santa's Workshop. Every parcel packed with care sends a little goodwill back out into the world, and the coins it earns pay to put things right before Christmas Eve.</p>
-          <p>Each parcel is a small, hand-made puzzle. Gifts drop into a side-on box under gravity, you drag them in and tap to turn them, and the box has to be filled exactly: gifts and bubble wrap, no gaps. Each puzzle has one answer. New rules arrive as you go: fragile gifts need padding beside them, heavy gifts can't sit on fragile ones, and "this way up" gifts can't be turned. Undo is always free, and there are no timers and no fail screens.</p>
-          <p>When a parcel is packed you fold the lid, pull the tape and thump down the ON TIME FOR XMAS stamp. Then it's back to the workshop to patch the roof, mend the chimney and fix the window, before decorating it with a tree, a train set and a star on top, while the sky outside fills with stars and northern lights.</p>
-          <p>Your guide is Postmaster Robin, an over-excited robin in a postman's cap who thinks every day is the best day ever. The whole game is made to look like a felt diorama, like a little stop-motion set.</p>
-          <ul>
-            <li>116 hand-checked parcels, each with exactly one solution</li>
-            <li>Repair, then decorate Santa's Workshop with 18 items</li>
-            <li>Plays offline, no account needed</li>
-          </ul>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
 <section class="band" id="trailer" aria-labelledby="trailer-h">
   <div class="wrap">
-    <div class="sec-head"><h2 id="trailer-h">Trailer and GIFs</h2><a class="btn gold small" href="/perfect-parcel/press/trailer/perfect-parcel-trailer-1080x1920.mp4" download>Download trailer <small>MP4, 30 s</small></a></div>
+    <div class="sec-head"><h2 id="trailer-h">Pack it, seal it, fix it up</h2></div>
     <div class="media">
       <div class="phone-frame"><video src="/perfect-parcel/press/trailer/perfect-parcel-trailer-web-886x1920.mp4" poster="/perfect-parcel/press/trailer/poster.jpg" controls playsinline preload="none" aria-label="Perfect Parcel trailer, 30 seconds"></video></div>
-      <div class="media-side">
-        <div class="gifs">
-          <figure><a href="/perfect-parcel/press/gifs/packing.gif"><div class="phone"><img src="/perfect-parcel/press/gifs/packing.gif" alt="Dragging and turning gifts into the box" loading="lazy" width="360" height="783"></div></a><figcaption class="cap">Packing<small>Drag, turn, no gaps</small></figcaption></figure>
-          <figure><a href="/perfect-parcel/press/gifs/sealing.gif"><div class="phone"><img src="/perfect-parcel/press/gifs/sealing.gif" alt="The last gift goes in and the parcel is stamped ON TIME FOR XMAS" loading="lazy" width="360" height="783"></div></a><figcaption class="cap">Sealing<small>The stamp lands</small></figcaption></figure>
-          <figure><a href="/perfect-parcel/press/gifs/workshop.gif"><div class="phone"><img src="/perfect-parcel/press/gifs/workshop.gif" alt="Repairs and decorations appearing in Santa's Workshop" loading="lazy" width="360" height="783"></div></a><figcaption class="cap">The workshop<small>Wrecked to wonderful</small></figcaption></figure>
-        </div>
-        <p class="note">The downloadable trailer is 1080 × 1920, made for phones and social posts. The GIFs are captured from the game on iPhone; open one to save it.</p>
+      <div class="features">
+        <div class="felt feature"><div class="thumb"><img src="/perfect-parcel/press/web/01-packing.jpg" alt="" loading="lazy"></div><div><h3>Pack every gift</h3><p>Drag gifts into the box and tap to turn them. Fill every square, gifts and bubble wrap, with not a gap to spare. Fragile, heavy and "this way up" gifts keep 116 parcels fresh.</p></div></div>
+        <div class="felt feature"><div class="thumb"><img src="/perfect-parcel/press/web/02-sealed.jpg" alt="" loading="lazy"></div><div><h3>Seal it with a stamp</h3><p>Fold the lid, pull the tape and thump down the ON TIME FOR XMAS stamp. Pack it without a hint for bonus coins.</p></div></div>
+        <div class="felt feature"><div class="thumb"><img src="/perfect-parcel/press/web/04-workshop-decorated.jpg" alt="" loading="lazy"></div><div><h3>Fix Santa's Workshop</h3><p>The new sleigh crashed through the roof. Spend your coins on repairs, then deck the halls with a tree, a train set and a star on top.</p></div></div>
       </div>
     </div>
   </div>
@@ -237,51 +222,42 @@ footer nav{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:8px}
 
 <section aria-labelledby="shots-h">
   <div class="wrap">
-    <div class="sec-head"><h2 id="shots-h">Screenshots</h2><a class="btn small" href="/perfect-parcel/press/perfect-parcel-press-kit.zip" download>Download all <small>in the ZIP</small></a></div>
-    <div class="shots">
-      <a href="/perfect-parcel/press/screens/01-packing.png"><img src="/perfect-parcel/press/web/01-packing.jpg" alt="Packing a parcel for Mrs Claus" loading="lazy" width="540" height="1174"></a>
-      <a href="/perfect-parcel/press/screens/02-sealed.png"><img src="/perfect-parcel/press/web/02-sealed.jpg" alt="Parcel sealed: Perfectly packed!" loading="lazy" width="540" height="1174"></a>
-      <a href="/perfect-parcel/press/screens/03-workshop-wrecked.png"><img src="/perfect-parcel/press/web/03-workshop-wrecked.jpg" alt="Santa's Workshop after the sleigh crash" loading="lazy" width="540" height="1174"></a>
-      <a href="/perfect-parcel/press/screens/04-workshop-decorated.png"><img src="/perfect-parcel/press/web/04-workshop-decorated.jpg" alt="The workshop repaired and being decorated" loading="lazy" width="540" height="1174"></a>
-      <a href="/perfect-parcel/press/screens/05-postmaster-robin.png"><img src="/perfect-parcel/press/web/05-postmaster-robin.jpg" alt="Postmaster Robin welcomes the new elf" loading="lazy" width="540" height="1174"></a>
-      <a href="/perfect-parcel/press/screens/06-home.png"><img src="/perfect-parcel/press/web/06-home.jpg" alt="The snowy home screen" loading="lazy" width="540" height="1174"></a>
+    <div class="sec-head"><h2 id="shots-h">A cosy felt world</h2></div>
+    <div class="shots four">
+      <figure><img src="/perfect-parcel/press/web/06-home.jpg" alt="The snowy home screen with the post office" loading="lazy" width="540" height="1174"></figure>
+      <figure><img src="/perfect-parcel/press/web/01-packing.jpg" alt="Packing a parcel for Mrs Claus" loading="lazy" width="540" height="1174"></figure>
+      <figure><img src="/perfect-parcel/press/web/03-workshop-wrecked.jpg" alt="Santa's Workshop after the sleigh crash" loading="lazy" width="540" height="1174"></figure>
+      <figure><img src="/perfect-parcel/press/web/04-workshop-decorated.jpg" alt="The workshop repaired and decorated" loading="lazy" width="540" height="1174"></figure>
     </div>
   </div>
 </section>
 
-<section style="padding-top:8px" aria-labelledby="art-h">
+<section style="padding-top:8px" aria-label="Postmaster Robin">
   <div class="wrap">
-    <div class="sec-head"><h2 id="art-h">Logo, icon and Robin</h2><a class="btn small" href="/perfect-parcel/press/perfect-parcel-press-kit.zip" download>Download all <small>in the ZIP</small></a></div>
-    <div class="assets">
-      <div class="felt asset"><div class="pic"><img src="/perfect-parcel/press/web/logo.png" alt="Perfect Parcel logo" loading="lazy"></div><h3>Logo</h3><div class="links"><a href="/perfect-parcel/press/art/perfect-parcel-logo.png">PNG</a><a href="/perfect-parcel/press/art/perfect-parcel-logo.svg">SVG</a></div></div>
-      <div class="felt asset"><div class="pic dark"><img class="icon" src="/perfect-parcel/press/web/app-icon.png" alt="App icon: Postmaster Robin on red felt" loading="lazy"></div><h3>App icon</h3><div class="links"><a href="/perfect-parcel/press/art/app-icon-1024.png">PNG, 1024</a></div></div>
-      <div class="felt asset"><div class="pic"><img src="/perfect-parcel/press/web/robin-happy.png" alt="Postmaster Robin, happy" loading="lazy"></div><h3>Postmaster Robin</h3><div class="links"><a href="/perfect-parcel/press/art/postmaster-robin-happy.png">PNG</a><a href="/perfect-parcel/press/art/postmaster-robin-happy.svg">SVG</a></div></div>
-      <div class="felt asset"><div class="pic"><img src="/perfect-parcel/press/web/robin-hard-hat.png" alt="Robin in a hard hat, cheering" loading="lazy"></div><h3>Robin, repairing</h3><div class="links"><a href="/perfect-parcel/press/art/postmaster-robin-hard-hat.png">PNG</a><a href="/perfect-parcel/press/art/postmaster-robin-hard-hat.svg">SVG</a></div></div>
+    <div class="felt robin-card">
+      <img src="/perfect-parcel/press/web/robin-happy.png" alt="Postmaster Robin" loading="lazy" width="760" height="637">
+      <div>
+        <span class="tag">Meet Postmaster Robin</span>
+        <p class="say" style="margin-top:12px">"You must be the new elf! We have a <em>lot</em> of parcels. Best day ever!"</p>
+        <p style="margin-top:10px">An over-excited robin in a postman's cap who thinks every day is the best day ever. Again.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section style="padding-top:8px" aria-label="Developer and contact">
-  <div class="wrap about">
-    <div class="felt">
-      <span class="tag">About the developer</span>
-      <h3>Paul Billings</h3>
-      <p>Paul Billings is an independent developer in Birmingham, UK, who makes small, cosy games for iPhone. He made Perfect Parcel on his own in Unity, from the first sketch to the last felt stitch.</p>
-    </div>
-    <div class="felt">
-      <span class="tag red">Press and contact</span>
-      <h3>Codes, interviews and questions</h3>
-      <p>Review codes and early TestFlight access are available for press and creators. Just ask.</p>
-      <div class="contact-line"><a class="mail" id="mail" href="mailto:perfect-parcel@paulbillings.co.uk">perfect-parcel@paulbillings.co.uk</a><button class="copy" type="button" data-copy="mail">Copy</button></div>
-    </div>
+<section class="cta" aria-label="Get the game">
+  <div class="wrap" style="display:grid;justify-items:center;gap:16px">
+    <p class="pitch">Coming to iPhone this Christmas.</p>
+    <span class="soon big"><svg width="22" height="26" viewBox="0 0 20 24" aria-hidden="true"><path fill="#fff" d="M16.4 12.7c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg><span>Coming soon to the<b>App Store</b></span></span>
+    <p style="color:var(--ink-soft)">Free to play, with optional in-app purchases. Plays offline, no account needed.</p>
   </div>
 </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <p>Perfect Parcel © 2026 Paul Billings. You're welcome to use anything on this page to write about or feature the game.</p>
-    <nav aria-label="Information"><a href="/perfect-parcel/privacy">Privacy policy</a><a href="/perfect-parcel/support">Support</a><a href="/">Paul Billings</a></nav>
+    <p>Perfect Parcel © 2026 Paul Billings. Made in Birmingham, UK.</p>
+    <nav aria-label="Information"><a href="/perfect-parcel/support">Support</a><a href="/perfect-parcel/privacy">Privacy policy</a><a href="/perfect-parcel/press">Press kit</a><a href="/">Paul Billings</a></nav>
   </div>
 </footer>
 
