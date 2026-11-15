@@ -1,4 +1,22 @@
 const Webpack = require('webpack');
+const fs = require('fs');
+const path = require('path');
+
+// The home page's photos and scene layers, served as-is at /assets/<file>
+class CopyHomeAssets {
+  apply(compiler) {
+    const dir = path.resolve(__dirname, 'src/home');
+    compiler.hooks.emit.tap('CopyHomeAssets', compilation => {
+      fs.readdirSync(dir).forEach(file => {
+        const data = fs.readFileSync(path.join(dir, file));
+        compilation.assets[`assets/${file}`] = {
+          source: () => data,
+          size: () => data.length
+        };
+      });
+    });
+  }
+}
 module.exports = {
   entry: {
     vendor: './src/vendor.js',
@@ -29,6 +47,7 @@ module.exports = {
     new Webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
-    })
+    }),
+    new CopyHomeAssets()
   ]
 }
