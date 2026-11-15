@@ -2,13 +2,75 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<!-- Google tag (Google Tag Manager container GTM-5V6NFP7Z) -->
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5V6NFP7Z"></script>
+<!-- Google Tag Manager (GTM-5V6NFP7Z): loads only after the visitor accepts analytics cookies -->
 <script>
+(function () {
+  var KEY = 'pb-analytics', ID = 'GTM-5V6NFP7Z', loaded = false;
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  window.gtag = gtag;
+  function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+  function load() {
+    if (loaded) return; loaded = true;
+    gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+    gtag('js', new Date());
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtm.js?id=' + ID;
+    document.head.appendChild(s);
+  }
+  function clearCookies() {
+    var host = location.hostname, base = host.replace(/^www\./, '');
+    document.cookie.split(';').forEach(function (c) {
+      var n = c.split('=')[0].trim();
+      if (/^_ga|^_gid|^_gat/.test(n)) {
+        [host, '.' + host, base, '.' + base].forEach(function (d) {
+          document.cookie = n + '=; Max-Age=0; path=/; domain=' + d;
+        });
+        document.cookie = n + '=; Max-Age=0; path=/';
+      }
+    });
+  }
+  function choose(v) {
+    var was = get(); set(v); close();
+    if (v === 'granted') load();
+    else if (was === 'granted' || loaded) { clearCookies(); location.reload(); }
+  }
+  var box = null;
+  function close() { if (box) { box.remove(); box = null; } }
+  function open() {
+    if (box) return;
+    box = document.createElement('div');
+    box.className = 'pb-cookies';
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-label', 'Cookies');
+    box.innerHTML = '<p>Can I use Google Analytics cookies to see how many people visit and which pages they read? Nothing is set unless you say yes.</p>' +
+      '<div class="pb-cookies-actions"><button type="button" data-v="granted">Accept</button><button type="button" data-v="denied">No thanks</button></div>';
+    box.addEventListener('click', function (e) { var v = e.target.getAttribute && e.target.getAttribute('data-v'); if (v) choose(v); });
+    document.body.appendChild(box);
+  }
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest && e.target.closest('[data-cookie-settings]');
+    if (t) { e.preventDefault(); open(); }
+  });
+  var c = get();
+  if (c === 'granted') load();
+  else if (c !== 'denied') {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', open); else open();
+  }
+})();
 </script>
+<style>
+.pb-cookies{position:fixed;z-index:1000;left:max(16px,env(safe-area-inset-left,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));max-width:400px;width:calc(100% - 32px);box-sizing:border-box;
+  padding:18px 18px 16px;border-radius:18px;background:#13202F;color:#F2F5F9;box-shadow:0 18px 50px rgba(8,14,24,.35);
+  font:500 15px/1.5 "Geist","Helvetica Neue","Segoe UI",system-ui,sans-serif}
+.pb-cookies p{margin:0 0 14px;color:inherit;font:inherit}
+.pb-cookies-actions{display:flex;flex-wrap:wrap;gap:10px}
+.pb-cookies button{font:600 15px/1 "Geist","Helvetica Neue","Segoe UI",system-ui,sans-serif;padding:11px 18px;border-radius:999px;cursor:pointer;border:1px solid rgba(242,245,249,.35);background:transparent;color:#F2F5F9}
+.pb-cookies button[data-v="granted"]{background:#F2F5F9;color:#13202F;border-color:#F2F5F9}
+.pb-cookies button:focus-visible{outline:3px solid #FFB86B;outline-offset:3px}
+.pb-cookie-link{font:inherit;color:inherit;background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Paul Billings: full-stack developer in Birmingham by day, maker of cosy iPhone games by night.">
 <link rel="icon" type="image/png" href="/favicon.png">
@@ -442,7 +504,7 @@ footer .wrap { padding-block: 30px 40px; display: flex; flex-wrap: wrap; justify
 <footer>
   <div class="wrap">
     <span>© 2026 Paul Billings</span>
-    <span>The view is Birmingham, from sunrise to quite late.</span>
+    <span>The view is Birmingham, from sunrise to quite late. <button type="button" class="pb-cookie-link" data-cookie-settings>Cookie settings</button></span>
   </div>
 </footer>
 
