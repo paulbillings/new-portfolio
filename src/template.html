@@ -122,7 +122,12 @@
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body { background: #7EA6DE; color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; overflow-x: hidden; overflow-x: clip; }
-#sky { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; height: 100lvh; z-index: 0; display: block; }
+/* The sky is sticky rather than fixed: it stays put while you scroll but is drawn like page content,
+   so on iPhone it carries on under the status bar and Safari's floating bottom bar. It takes up no space. */
+#sky { position: sticky; top: 0; left: 0; z-index: 0; display: block; width: 100%;
+  height: 100vh; height: calc(100lvh + env(safe-area-inset-bottom, 0px));
+  margin-top: calc(-1 * env(safe-area-inset-top, 0px));
+  margin-bottom: -100vh; margin-bottom: calc(env(safe-area-inset-top, 0px) - 100lvh - env(safe-area-inset-bottom, 0px)); }
 main, .site-header, footer { position: relative; z-index: 1; }
 a { color: inherit; }
 :focus-visible { outline: 3px solid #FFB86B; outline-offset: 3px; border-radius: 6px; }
