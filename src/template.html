@@ -72,9 +72,11 @@
 .pb-cookie-link{font:inherit;color:inherit;background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#7EA6DE">
 <meta name="description" content="Paul Billings: full-stack developer in Birmingham by day, maker of cosy iPhone games by night.">
 <link rel="icon" type="image/png" href="/favicon.png">
 <style>
+  html { background: #7EA6DE; }
   :root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
   body { margin: 0; font: 14px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
   img { max-width: 100%; }
@@ -119,7 +121,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { background: #1A2A57; color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; overflow-x: hidden; overflow-x: clip; }
+body { background: #7EA6DE; color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; overflow-x: hidden; overflow-x: clip; }
 #sky { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; display: block; }
 main, .site-header, footer { position: relative; z-index: 1; }
 a { color: inherit; }
@@ -857,7 +859,20 @@ footer .wrap { padding-block: 30px 40px; display: flex; flex-wrap: wrap; justify
     if (mins !== lastMin) { lastMin = mins; var hh = Math.floor(mins / 60), mm = mins % 60; clockEl.textContent = (hh < 10 ? '0' : '') + hh + ':' + (mm < 10 ? '0' : '') + mm; }
     var ic = p > 0.52 ? 'moon' : 'sun';
     if (ic !== lastIcon) { lastIcon = ic; iconEl.innerHTML = ic === 'moon' ? moonIcon : sunIcon; }
+    // Page background follows the top of the sky, so the phone's status bar and browser bars match it
+    var tnow = performance.now();
+    if (Math.abs(p - lastTopP) < 0.004 && tnow - lastTopT < 1000) return;
+    lastTopP = p; lastTopT = tnow;
+    var c = ramp(skyTop, p);
+    try { var px = ctx.getImageData(Math.floor(cv.width * 0.15), Math.floor(2 * dpr), 1, 1).data; if (px[3]) c = [px[0], px[1], px[2]]; } catch (e) {}
+    var top = rgb(c.map(Math.round));
+    if (top !== lastTop) {
+      lastTop = top;
+      root.style.backgroundColor = top; document.body.style.backgroundColor = top;
+      if (themeMeta) themeMeta.setAttribute('content', top);
+    }
   }
+  var lastTop = '', lastTopP = -1, lastTopT = 0, themeMeta = document.querySelector('meta[name="theme-color"]');
 
   window.addEventListener('pointermove', function (e) {
     mx = (e.clientX / W - 0.5) * 2; my = (e.clientY / H - 0.5) * 2;
