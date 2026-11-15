@@ -6,8 +6,31 @@
 <meta name="color-scheme" content="light dark">
 <title>Privacy policy — Perfect Parcel</title>
 <style>body{margin:0;background:#f4ead8;color:#2b251c;font:1.1rem/1.65 system-ui,sans-serif;overflow-wrap:break-word}main{max-width:46rem;margin:auto;padding:2rem 1.25rem}h1,h2{font-family:Georgia,serif;line-height:1.2}h2{margin-top:2rem}a{color:#075b58}nav{display:flex;flex-wrap:wrap;gap:1.5rem}@media (prefers-color-scheme:dark){body{background:#1f1b15;color:#ece3d2}a{color:#7fd1cc}}</style>
+<style>
+/* Site bar: same pill as the Perfect Parcel pages and the home page header */
+@font-face{font-family:"Geist";src:url(/perfect-parcel/press/fonts/Geist-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Geist";src:url(/perfect-parcel/press/fonts/Geist-SemiBold.woff2) format("woff2");font-weight:600;font-display:swap}
+.site-bar{max-width:46rem;margin:0 auto;padding-top:max(14px,env(safe-area-inset-top,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.site-bar .bar{display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 18px;border-radius:999px;
+  background:rgba(255,255,255,.55);border:1px solid rgba(43,37,28,.12);font:500 15px/1.4 "Geist","Helvetica Neue","Segoe UI",system-ui,sans-serif;color:#13202F}
+.site-bar .brand{font-weight:600;font-size:19px;letter-spacing:-.01em;text-decoration:none;color:inherit;white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
+.site-bar .brand svg{width:16px;height:16px;opacity:.7}
+.site-bar .nav{display:flex;align-items:center;gap:4px}
+.site-bar .nav a{font-weight:500;font-size:15px;text-decoration:none;color:inherit;padding:8px 14px;border-radius:999px;transition:background .2s;white-space:nowrap}
+.site-bar .nav a:hover{background:rgba(19,32,47,.12)}
+.site-bar .nav a[aria-current="page"]{background:rgba(19,32,47,.09)}
+.site-bar a:focus-visible{outline:3px solid #FFB86B;outline-offset:3px}
+@media (prefers-color-scheme:dark){.site-bar .bar{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);color:#ece3d2}.site-bar .nav a:hover{background:rgba(255,255,255,.14)}.site-bar .nav a[aria-current="page"]{background:rgba(255,255,255,.1)}}
+@media (max-width:600px){.site-bar .nav .hide-sm{display:none}.site-bar .brand{font-size:17px}.site-bar .nav a{padding:8px 10px;font-size:14px}}
+</style>
 </head>
 <body>
+<header class="site-bar">
+  <nav class="bar" aria-label="Site">
+    <a class="brand" href="/" title="Back to paulbillings.co.uk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Paul Billings</a>
+    <div class="nav"><a href="/perfect-parcel">Perfect Parcel</a><a href="/perfect-parcel/press" class="hide-sm">Press kit</a><a href="/perfect-parcel/privacy" aria-current="page">Privacy</a></div>
+  </nav>
+</header>
 <main>
 <p>Perfect Parcel</p>
 <h1>Privacy policy</h1>
