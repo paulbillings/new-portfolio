@@ -64,7 +64,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--navy);outline-offse
 .btn.gold:hover{box-shadow:0 3px 0 var(--gold-dk)}
 
 .hero{background:linear-gradient(180deg,var(--sky-1),var(--sky-2));position:relative;overflow:hidden}
-.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:24px;align-items:end;padding-block:36px 0}
+.hero .wrap.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:24px;align-items:end;padding-block:36px 0}
 .hero-copy{padding-bottom:56px;display:grid;gap:18px;justify-items:start}
 .eyebrow{font:800 .78rem/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--navy);background-color:var(--cream);padding:.55em .9em;border-radius:99px}
 .logo{width:min(420px,100%);height:auto;display:block}
@@ -142,7 +142,7 @@ footer{padding-block:28px 40px;color:var(--ink-soft);font-size:.9rem}
 footer nav{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:8px}
 
 @media (max-width:860px){
-  .hero .wrap,.grid-fact,.media,.about{grid-template-columns:minmax(0,1fr)}
+  .hero .wrap.hero-grid,.grid-fact,.media,.about{grid-template-columns:minmax(0,1fr)}
   .hero-copy{padding-bottom:8px}
   .hero-art img{width:min(260px,70%)}
   .shots{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -186,11 +186,36 @@ footer nav{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:8px}
   .robin-card img{max-width:200px}
 }
 </style>
+
+<style>
+/* Site bar: matches the main paulbillings.co.uk header (frosted glass pill, Geist), so the game pages lead back home */
+@font-face{font-family:"Geist";src:url(/perfect-parcel/press/fonts/Geist-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Geist";src:url(/perfect-parcel/press/fonts/Geist-SemiBold.woff2) format("woff2");font-weight:600;font-display:swap}
+.site-bar{position:relative;z-index:2;padding-top:max(14px,env(safe-area-inset-top,0px))}
+.site-bar .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 18px;border-radius:999px;
+  background:rgba(255,255,255,.32);border:1px solid rgba(255,255,255,.5);-webkit-backdrop-filter:blur(16px) saturate(1.4);backdrop-filter:blur(16px) saturate(1.4);
+  font-family:"Geist","Helvetica Neue","Segoe UI",system-ui,sans-serif;color:#13202F}
+.site-bar .brand{font-weight:600;font-size:19px;letter-spacing:-.01em;text-decoration:none;color:inherit;white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
+.site-bar .brand svg{width:16px;height:16px;opacity:.7}
+.site-bar .nav{display:flex;align-items:center;gap:4px}
+.site-bar .nav a{font-weight:500;font-size:15px;text-decoration:none;color:inherit;padding:8px 14px;border-radius:999px;transition:background .2s;white-space:nowrap}
+.site-bar .nav a:hover{background:rgba(19,32,47,.12)}
+.site-bar .nav a[aria-current="page"]{background:rgba(19,32,47,.09)}
+.site-bar a:focus-visible{outline:3px solid #FFB86B;outline-offset:3px}
+.hero .wrap.hero-grid{padding-block:20px 0}
+@media (max-width:600px){.site-bar .nav .hide-sm{display:none}.site-bar .brand{font-size:17px}.site-bar .nav a{padding:8px 10px;font-size:14px}}
+</style>
 </head>
 <body>
 <header class="hero">
   <div class="snow" aria-hidden="true" id="snow"></div>
-  <div class="wrap">
+  <div class="wrap site-bar">
+    <nav class="bar" aria-label="Site">
+      <a class="brand" href="/" title="Back to paulbillings.co.uk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Paul Billings</a>
+      <div class="nav"><a href="/perfect-parcel" aria-current="page">Perfect Parcel</a><a href="/perfect-parcel/press">Press kit</a><a href="/perfect-parcel/support" class="hide-sm">Support</a></div>
+    </nav>
+  </div>
+  <div class="wrap hero-grid">
     <div class="hero-copy">
       <h1><img class="logo" src="/perfect-parcel/press/web/logo.png" alt="Perfect Parcel" width="840" height="457"></h1>
       <p class="pitch">Everything fits. Surely.</p>
@@ -257,7 +282,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:8px}
 <footer>
   <div class="wrap">
     <p>Perfect Parcel © 2026 Paul Billings. Made in Birmingham, UK.</p>
-    <nav aria-label="Information"><a href="/perfect-parcel/support">Support</a><a href="/perfect-parcel/privacy">Privacy policy</a><a href="/perfect-parcel/press">Press kit</a><a href="/">Paul Billings</a></nav>
+    <nav aria-label="Information"><a href="/perfect-parcel/support">Support</a><a href="/perfect-parcel/privacy">Privacy policy</a><a href="/perfect-parcel/press">Press kit</a><a href="/">More from Paul Billings</a></nav>
   </div>
 </footer>
 
