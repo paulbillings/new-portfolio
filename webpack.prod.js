@@ -36,11 +36,9 @@ module.exports = merge(common, {
       new HtmlWebpackPlugin({
         template: './src/template.html',
         favicon: './src/assets/favicon.png',
-        minify: {
-          removeAttributeQuotes: true,
-          collapseWhitespace: true,
-          removeComments: true
-        }
+        // The home page is self-contained (inline CSS, JS and images)
+        inject: false,
+        minify: false
       })
     ]
   },
