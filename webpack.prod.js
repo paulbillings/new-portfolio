@@ -70,7 +70,9 @@ module.exports = merge(common, {
       filename: '[name].[contentHash].css'
     }),
     ...staticPages,
-    ...pressKit
+    ...pressKit,
+    // Files served from the site root, e.g. /app-ads.txt for AdMob
+    new CopyFolderPlugin(path.resolve(__dirname, 'src/root'), '')
   ],
   module: {
     rules: [
